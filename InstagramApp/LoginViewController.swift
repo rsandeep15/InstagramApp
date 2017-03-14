@@ -25,12 +25,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: Any) {
-        PFUser.logInWithUsername(inBackground: username.text!, password: password.text!) { (success: PFUser?, error: Error?) in
-            if (success != nil) {
-                print("Logged In!")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
-                print(error?.localizedDescription)
+        if (!(username.text?.isEmpty)! && !(password.text?.isEmpty)!) {
+            PFUser.logInWithUsername(inBackground: username.text!, password: password.text!) { (success: PFUser?, error: Error?) in
+                if (success != nil) {
+                    print("Logged In!")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    let alert = UIAlertController(title: "Error", message: "Incorrect Password", preferredStyle: UIAlertControllerStyle.alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+                        // Default alert
+                    })
+                    alert.addAction(defaultAction)
+                    self.present(alert, animated: true, completion: nil)
+                    print(error?.localizedDescription ?? "Error Unavailable")
+                }
             }
         }
         
@@ -42,22 +50,29 @@ class LoginViewController: UIViewController {
         
         newUser.username = username.text
         newUser.password = password.text
-        newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if success {
-                print("Yay, created a user")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            }else {
-                print(error?.localizedDescription)
+        if (username.text != "" && password.text != "") {
+            newUser.signUpInBackground { (success: Bool, error: Error?) in
+                if success {
+                    print("Yay, created a user")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                }else {
+                    let alert = UIAlertController(title: "Error", message: "Incorrect Password", preferredStyle: UIAlertControllerStyle.alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+                        // Default alert
+                    })
+                    alert.addAction(defaultAction)
+                    self.present(alert, animated: true, completion: nil)
+                    print(error?.localizedDescription ?? "Error Unavailable")
+                    
+                }
                 
             }
-            
-            
         }
         
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -65,6 +80,6 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }
