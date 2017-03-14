@@ -7,4 +7,5 @@ target 'InstagramApp' do
 
   # Pods for InstagramApp
     pod 'Parse'
+    pod 'ParseUI'
 end

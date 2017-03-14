@@ -38,7 +38,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYv-Dv-SXJ">
                                 <rect key="frame" x="160" y="354" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign In"/>
+                                <color key="backgroundColor" red="1" green="0.56335534241977014" blue="0.48202217518696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgX-fM-azk"/>
                                 </connections>
@@ -47,33 +50,36 @@
                                 <rect key="frame" x="136" y="28" width="103" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.56335534239999996" blue="0.48202217520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="359-6W-hRW">
-                                <rect key="frame" x="167" y="150" width="41" height="21"/>
+                                <rect key="frame" x="167" y="150" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.56335534239999996" blue="0.48202217520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXW-NW-0AZ">
-                                <rect key="frame" x="150" y="250" width="74" height="21"/>
+                                <rect key="frame" x="150" y="250" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.56335534239999996" blue="0.48202217520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ6-wl-xIS">
                                 <rect key="frame" x="160" y="392" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up"/>
+                                <color key="backgroundColor" red="1" green="0.56335534241977014" blue="0.48202217518696" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkl-yY-G36"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98398368238272782" green="0.8671811836457991" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.2476145708372719" green="1" blue="0.69362704653081031" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="pV2-h7-ajE" id="Wkq-gh-GpA"/>
@@ -100,6 +106,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-3d-Cfh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.25098039220000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="postCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="266" id="F1N-Gi-GBv" customClass="PostCell" customModule="InstagramApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="266"/>
@@ -108,28 +115,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YEn-Y3-48a">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YEn-Y3-48a" customClass="PFImageView">
                                                     <rect key="frame" x="0.0" y="8" width="375" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="oQD-Bi-ycb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbu-mW-jR3">
-                                                    <rect key="frame" x="8" y="236" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbu-mW-jR3">
+                                                    <rect key="frame" x="166.5" y="243.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="nbu-mW-jR3" firstAttribute="top" secondItem="YEn-Y3-48a" secondAttribute="bottom" constant="35.5" id="D1Q-HG-IQJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="nbu-mW-jR3" secondAttribute="bottom" constant="1" id="KeY-rE-fPz"/>
                                                 <constraint firstItem="YEn-Y3-48a" firstAttribute="top" secondItem="FF2-5w-jsk" secondAttribute="top" constant="8" id="Uhz-oF-9hu"/>
                                                 <constraint firstItem="YEn-Y3-48a" firstAttribute="leading" secondItem="FF2-5w-jsk" secondAttribute="leading" id="duj-wD-261"/>
+                                                <constraint firstItem="nbu-mW-jR3" firstAttribute="centerX" secondItem="FF2-5w-jsk" secondAttribute="centerX" id="hKW-JN-kM4"/>
                                                 <constraint firstAttribute="trailing" secondItem="YEn-Y3-48a" secondAttribute="trailing" id="q3N-Az-TeH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.63128675290327896" green="0.85095174357890291" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="caption" destination="nbu-mW-jR3" id="1Qz-SQ-t3R"/>
+                                            <outlet property="caption" destination="nbu-mW-jR3" id="wxS-44-UuL"/>
                                             <outlet property="postImage" destination="YEn-Y3-48a" id="TD3-48-EQM"/>
                                         </connections>
                                     </tableViewCell>
@@ -147,7 +157,7 @@
                     <navigationItem key="navigationItem" title="Feed" id="iQN-2w-fhH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sm4-eu-jlQ">
                             <connections>
-                                <segue destination="JFc-3c-Se9" kind="showDetail" id="u0K-2D-RHu"/>
+                                <segue destination="JFc-3c-Se9" kind="presentation" id="u0K-2D-RHu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -159,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="1916" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--New Post View Controller-->
         <scene sceneID="ZOB-Tx-PvM">
             <objects>
-                <viewController id="JQu-pY-iDc" sceneMemberID="viewController">
+                <viewController id="JQu-pY-iDc" customClass="NewPostViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5rf-g0-f0A"/>
                         <viewControllerLayoutGuide type="bottom" id="6VQ-N5-cKQ"/>
@@ -191,8 +201,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-8y-Bez">
+                                <rect key="frame" x="166" y="484" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPost:" destination="JQu-pY-iDc" eventType="touchUpInside" id="vYs-uF-WGk"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NRP-JB-KIT" firstAttribute="leading" secondItem="3qE-mi-t2f" secondAttribute="leading" id="Htn-BV-kDY"/>
                             <constraint firstItem="NRP-JB-KIT" firstAttribute="top" secondItem="5rf-g0-f0A" secondAttribute="bottom" id="mub-Fo-uJT"/>
@@ -200,12 +220,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rMr-iX-AJm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="vnE-Al-eSq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="IWD-No-oee">
+                            <connections>
+                                <action selector="onCancel:" destination="JQu-pY-iDc" id="lxw-BS-vSp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="vnE-Al-eSq">
+                            <connections>
+                                <action selector="choosePic:" destination="JQu-pY-iDc" id="fXK-xl-fUk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="caption" destination="XAM-6U-FxK" id="pub-gR-EaX"/>
+                        <outlet property="postImage" destination="NRP-JB-KIT" id="nGf-fY-pQj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIr-no-ys7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3670" y="36"/>
+            <point key="canvasLocation" x="3662" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ko5-rr-pYD">
@@ -241,7 +274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arM-M0-uzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824.8000000000002" y="36.431784107946029"/>
+            <point key="canvasLocation" x="2820" y="36"/>
         </scene>
     </scenes>
     <resources>

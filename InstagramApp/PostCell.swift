@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet weak var postImage: UIImageView!
-    
+    @IBOutlet weak var postImage: PFImageView?
     @IBOutlet weak var caption: UILabel!
+    
+    var post: PFObject? {
+        didSet {
+            caption.text = post!["caption"] as! String
+            self.postImage?.file = post!["media"] as? PFFile
+            self.postImage?.loadInBackground()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

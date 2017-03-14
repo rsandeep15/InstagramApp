@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Parse
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    var posts: [Post]? 
+    var posts: [PFObject]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 125
         // Do any additional setup after loading the view.
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(loadPosts), userInfo: nil, repeats: true)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,8 +29,30 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    func loadPosts() {
+        let query = PFQuery(className: "Post")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackground { (postsFetched: [PFObject]?, error: Error?) -> Void in
+            if let postsFetched = postsFetched {
+                // do something with the array of object returned by the call
+                if (self.posts == nil) {
+                    self.posts = postsFetched 
+                }
+                else {
+                    self.posts! = (postsFetched)
+                }
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let posts = posts {
+        if posts != nil {
             return posts.count
         }
         else {
@@ -38,6 +66,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
+        var post = posts?[indexPath.row]
+        cell.post = post
         return cell
     }
     
